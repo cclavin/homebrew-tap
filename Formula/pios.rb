@@ -11,7 +11,7 @@ class Pios < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/cclavin/pios/releases/download/v1.0.0/pios_Darwin_x86_64.tar.gz"
-      sha256 "0eb7e330ef2b0ea7807dc99c999ceae61f1ab9102012aaa013db9d907e104421"
+      sha256 "8b2a5c98498eed9e41d500d0c5b2692d783444b4fd1972c12ed25704f93f67d3"
 
       define_method(:install) do
         bin.install "pios"
@@ -19,7 +19,7 @@ class Pios < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/cclavin/pios/releases/download/v1.0.0/pios_Darwin_arm64.tar.gz"
-      sha256 "c22a0a2a9a8ea1af7ed9bceb555c82bbe8488c666aaf1106363e33bff01d4dca"
+      sha256 "81fccaf399e60a7aa1f26b4e62a57752a0c8888b565a47c4aa0c3543c1005d82"
 
       define_method(:install) do
         bin.install "pios"
@@ -30,14 +30,14 @@ class Pios < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/cclavin/pios/releases/download/v1.0.0/pios_Linux_x86_64.tar.gz"
-      sha256 "0b4cb8db5d48ee908acdfe2b69733b54799f4a9085bcc9ce1cad3f19fde918dd"
+      sha256 "bda2d73dc00d7d100dadc41a7a1b299bf89b08cd5c6ec3d5ab00f7159d9c6357"
       define_method(:install) do
         bin.install "pios"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/cclavin/pios/releases/download/v1.0.0/pios_Linux_arm64.tar.gz"
-      sha256 "d736317d146b4fd9bed52e8a981d5dbffd7f3b637d5f8f65be0fc411262df10d"
+      sha256 "dd395511dd418b3597c0124dc4788eacf46dca7cf12dd6883154525c7f58ad55"
       define_method(:install) do
         bin.install "pios"
       end
